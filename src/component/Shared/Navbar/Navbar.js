@@ -1,12 +1,15 @@
+import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav class="navbar navbar-expand-lg navbar-light container-fluid bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+    <nav className="navbar navbar-expand-lg navbar-light container-fluid bg-light">
+      <div className="container-fluid">
+        <Link to="/" className="navbar-brand">
           ChefsPortal
-        </a>
+        </Link>
         <button
           class="navbar-toggler"
           type="button"
@@ -16,34 +19,40 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
-            <li class="nav-item  mr-5">
-              <a class="nav-link active" aria-current="page" href="#">
+        <div className="collapse navbar-collapse " id="navbarTogglerDemo02">
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0 ">
+            <li className="nav-item  mr-5">
+              <Link to="/home" className="nav-link active">
                 Home
-              </a>
+              </Link>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active  ms-5" aria-current="page" href="#">
+            <li className="nav-item">
+              <Link to="/admin" className="nav-link active  ms-5">
                 Admin
-              </a>
+              </Link>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active  ms-5" aria-current="page" href="#">
+            <li className="nav-item">
+              <Link to="/contact" className="nav-link active  ms-5">
                 Contact
-              </a>
+              </Link>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active  ms-5" aria-current="page" href="#">
+            <li className="nav-item">
+              <Link to="/about" className="nav-link active  ms-5">
                 About
-              </a>
+              </Link>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active  ms-5" aria-current="page" href="#">
+            <li className="nav-item">
+              <Link to="/services" className="nav-link active  ms-5">
                 Services
-              </a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/login" className="nav-link active  ms-5">
+                Login
+                <FontAwesomeIcon icon={faSignInAlt} />
+              </Link>
             </li>
           </ul>
         </div>
