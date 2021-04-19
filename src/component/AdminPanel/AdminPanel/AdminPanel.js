@@ -1,9 +1,10 @@
 import React from "react";
+import Book from "../Book/Book";
 
 const AdminPanel = () => {
   return (
     <div>
-      <h1>Admin panel</h1>
+      <Book></Book>
     </div>
   );
 };

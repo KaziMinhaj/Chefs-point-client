@@ -1,10 +1,9 @@
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 export const firebaseConfig = {
-  apiKey: "AIzaSyCXDtgVnVkSHJuacSyMKOyjJf5ggidk_vo",
-  authDomain: "chefsportal-cba88.firebaseapp.com",
-  projectId: "chefsportal-cba88",
-  storageBucket: "chefsportal-cba88.appspot.com",
-  messagingSenderId: "341047611798",
-  appId: "1:341047611798:web:78478b5a540377cc1a8db7",
-  measurementId: "G-DT5QJFM3B1",
+  apiKey: "AIzaSyDaT2UP4ox5WqVKHIefviioKt3LDalbtPc",
+  authDomain: "auth-recape-61d73.firebaseapp.com",
+  projectId: "auth-recape-61d73",
+  storageBucket: "auth-recape-61d73.appspot.com",
+  messagingSenderId: "1055318276116",
+  appId: "1:1055318276116:web:0506fd84cf32de1fac8f01",
 };
