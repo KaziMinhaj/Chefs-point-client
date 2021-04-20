@@ -19,7 +19,7 @@ const Review = () => {
     prevData.rating = data.rating;
     console.log(prevData);
 
-    fetch("http://localhost:5000/addReview", {
+    fetch("https://shielded-savannah-63633.herokuapp.com/addReview", {
       method: "POST", // or 'PUT'
       headers: {
         "Content-Type": "application/json",

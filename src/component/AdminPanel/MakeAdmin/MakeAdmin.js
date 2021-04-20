@@ -12,7 +12,7 @@ const MakeAdmin = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/addAdmin", {
+    fetch("https://shielded-savannah-63633.herokuapp.com/addAdmin", {
       method: "POST", // or 'PUT'
       headers: {
         "Content-Type": "application/json",

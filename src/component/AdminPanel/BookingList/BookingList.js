@@ -7,7 +7,10 @@ const BookingList = () => {
   const [list, setList] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/bookingList/" + loggedInUser.email)
+    fetch(
+      "https://shielded-savannah-63633.herokuapp.com/bookingList/" +
+        loggedInUser.email
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

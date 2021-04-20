@@ -8,7 +8,7 @@ const Orderlist = () => {
   const [list, setList] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/bookingList")
+    fetch("https://shielded-savannah-63633.herokuapp.com/bookingList")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

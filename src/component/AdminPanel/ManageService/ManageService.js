@@ -8,7 +8,7 @@ const ManageService = () => {
   const [list, setList] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/services")
+    fetch("https://shielded-savannah-63633.herokuapp.com/services")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

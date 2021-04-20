@@ -17,7 +17,7 @@ export default function AddBook() {
       imageURL: imageURL,
     };
     console.log(eventData);
-    const url = `http://localhost:5000/addService`;
+    const url = `https://shielded-savannah-63633.herokuapp.com/addService`;
 
     fetch(url, {
       method: "POST",

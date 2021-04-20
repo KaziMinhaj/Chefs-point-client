@@ -27,7 +27,7 @@ const Book = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/addOrder", {
+    fetch("https://shielded-savannah-63633.herokuapp.com/addOrder", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

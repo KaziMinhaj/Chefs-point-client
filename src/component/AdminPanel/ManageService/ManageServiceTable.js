@@ -4,7 +4,7 @@ const ManageServiceTable = ({ data }) => {
   const handleDelete = () => {
     const name = data.name;
 
-    fetch("http://localhost:5000/deleteService/" + name)
+    fetch("https://shielded-savannah-63633.herokuapp.com/deleteService/" + name)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
