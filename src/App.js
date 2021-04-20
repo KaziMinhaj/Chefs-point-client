@@ -1,5 +1,6 @@
 import React, { createContext, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Addservice from "./component/AdminPanel/AddService/AddService";
 import AdminPanel from "./component/AdminPanel/AdminPanel/AdminPanel";
 import BookingList from "./component/AdminPanel/BookingList/BookingList";
 import MakeAdmin from "./component/AdminPanel/MakeAdmin/MakeAdmin";
@@ -21,7 +22,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Home />
+            <AdminPanel />
           </Route>
           <Route path="/home">
             <Home />
@@ -32,27 +33,27 @@ function App() {
           <PrivateRoute path="/admin">
             <AdminPanel />
           </PrivateRoute>
-          <Route path="/book">
+          <PrivateRoute path="/book">
             <AdminPanel />
-          </Route>
-          <Route path="/bookinglist">
+          </PrivateRoute>
+          <PrivateRoute path="/bookinglist">
             <BookingList></BookingList>
-          </Route>
-          <Route path="/orderlist">
+          </PrivateRoute>
+          <PrivateRoute path="/orderlist">
             <OrderList />
-          </Route>
-          <Route path="/makeadmin">
+          </PrivateRoute>
+          <PrivateRoute path="/makeadmin">
             <MakeAdmin />
-          </Route>
-          <Route path="/manageservice">
+          </PrivateRoute>
+          <PrivateRoute path="/manageservice">
             <ManageService />
-          </Route>
-          <Route path="/review">
+          </PrivateRoute>
+          <PrivateRoute path="/review">
             <Review></Review>
-          </Route>
-          <Route path="/addservice">
-            <Review></Review>
-          </Route>
+          </PrivateRoute>
+          <PrivateRoute path="/addservice">
+            <Addservice></Addservice>
+          </PrivateRoute>
         </Switch>
       </Router>
     </UserContext.Provider>

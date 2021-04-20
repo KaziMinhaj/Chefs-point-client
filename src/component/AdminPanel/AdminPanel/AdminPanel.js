@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { UserContext } from "../../../App";
 import Book from "../Book/Book";
+import Orderlist from "../OrderList/OrderList";
 
 const AdminPanel = () => {
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   return (
-    <div>
-      <Book></Book>
-    </div>
+    <div>{loggedInUser.isAdmin ? <Orderlist></Orderlist> : <Book></Book>}</div>
   );
 };
 

@@ -11,8 +11,8 @@ const Review = ({ data }) => {
         {/* <img src={faUser} alt="" /> */}
         <img style={{ width: "20%", height: "50px" }} src={profile} alt="" />
         <h6 className="card-text">{data.name}</h6>
-        <p>{data.designation}</p>
-        <p>{data.description}</p>
+        <p>{data.job}</p>
+        <p>{data.review}</p>
 
         <img style={{ width: "10%", height: "20px" }} src={star} alt="" />
         <img style={{ width: "10%", height: "20px" }} src={star} alt="" />

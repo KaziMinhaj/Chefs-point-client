@@ -17,6 +17,7 @@ const Login = () => {
 
   const history = useHistory();
   const location = useLocation();
+
   const { from } = location.state || { from: { pathname: "/" } };
 
   if (firebase.apps.length === 0) {
@@ -33,7 +34,8 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         const { displayName, email } = result.user;
-        const signedInUser = { name: displayName, email };
+        const signedInUser = { name: displayName, email: email };
+        console.log(signedInUser);
         setLoggedInUser(signedInUser);
         history.replace(from);
       })

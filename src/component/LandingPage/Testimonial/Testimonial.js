@@ -1,35 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Review from "./Review";
 
-const data = [
-  {
-    name: "Nas ahmed",
-    designation: "CEO, Nas Tech",
-    description:
-      "Ipsum anim incididunt voluptate sunt nostrud adipisicing veniam.",
-  },
-  {
-    name: "Jhankar Mahmud",
-    designation: "CEO, Pro. Hero",
-    description:
-      "Ipsum anim incididunt voluptate sunt nostrud adipisicing veniam.",
-  },
-  {
-    name: "Mahmudul Shohag",
-    designation: "CEO, Rokomari",
-    description:
-      "Ipsum anim incididunt voluptate sunt nostrud adipisicing veniam.",
-  },
-];
-
 const Testimonial = () => {
+  const [review, setReview] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/reviews")
+      .then((res) => res.json())
+      .then((data) => {
+        setReview(data);
+      });
+  }, []);
   return (
-    <div className="text-center bg-light">
+    <div className="text-center p-5 ">
       <div>
         <h1>Testimonial</h1>
       </div>
       <div className="row d-flex justify-content-center m-5">
-        {data.map((x) => (
+        {review.map((x) => (
           <Review data={x}></Review>
         ))}
       </div>

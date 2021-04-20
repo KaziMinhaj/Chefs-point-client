@@ -3,7 +3,7 @@ import message from "../../../images/message.png";
 
 const Contact = () => {
   return (
-    <div className="row">
+    <div className="row bg-light p-5">
       <div className="text-center">
         <h3>STAY IN TOUCH</h3>
       </div>
