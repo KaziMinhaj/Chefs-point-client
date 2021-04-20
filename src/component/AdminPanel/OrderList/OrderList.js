@@ -26,11 +26,11 @@ const Orderlist = () => {
         <table className="table table-hover">
           <thead>
             <tr>
-              <th scope="col">#</th>
               <th scope="col">Orderd By</th>
               <th scope="col">Email</th>
               <th scope="col">Service</th>
-              <th scope="col">Status</th>
+              <th scope="col">Current Status</th>
+              <th scope="col">Change Status</th>
             </tr>
           </thead>
           <tbody>

@@ -50,19 +50,20 @@ export default function AddBook() {
         <Sidebar></Sidebar>
       </div>
       <div className="col-md-8">
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form className="p-5" onSubmit={handleSubmit(onSubmit)}>
           <label>Service name </label>
           <br></br>
-          <input {...register("name")} />
+          <input className="form-control" {...register("name")} />
           <br></br>
           <label>Description</label>
           <br></br>
-          <input {...register("details")} />
+          <input className="form-control" {...register("details")} />
           <br></br>
           <label>Upload image</label>
           <br></br>
           <input type="file" onChange={handleUploadImage} />
-          <input type="submit" />
+          <br />
+          <input className="btn btn-success mt-3" type="submit" />
         </form>
       </div>
     </div>

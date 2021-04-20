@@ -22,6 +22,7 @@ const Book = () => {
   const handlePayment = (id) => {
     const newInfo = { ...order };
     newInfo.paymentId = id;
+    newInfo.status = "pending";
     setPay(newInfo);
   };
 

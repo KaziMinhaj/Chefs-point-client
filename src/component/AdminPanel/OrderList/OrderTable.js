@@ -1,13 +1,16 @@
 import React from "react";
+import Status from "./Status";
 
 const OrderTable = ({ data }) => {
   return (
     <tr>
-      <th scope="row">#</th>
       <td>{data.name}</td>
       <td>{data.email}</td>
       <td>{data.services}</td>
-      <td>pending</td>
+      <td>{data.status}</td>
+      <td>
+        <Status mydata={data}></Status>
+      </td>
     </tr>
   );
 };
